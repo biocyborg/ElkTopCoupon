@@ -1,0 +1,45 @@
+.container {
+  width: 100vw;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.content {
+  display: flex;
+  max-width: 1248px;
+  width: 100%;
+}
+
+.logoTitle {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-family: var(--font-geist-ProtestRevolution);
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+.menus {
+  display: flex;
+  align-items: center;
+  margin-left: 48px;
+  font-size: 16px;
+}
+
+.item {
+  color: #fffdf6;
+  margin: 0 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 2px 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.item:hover {
+  background: #8776e0;
+}
