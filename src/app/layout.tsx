@@ -31,6 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta name="verify-admitad" content="5af0702a27" />
       <body
         className={`${geistChakraPetch.variable} ${geistProtestRevolution.variable} ${styles.container}`}
       >
