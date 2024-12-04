@@ -43,8 +43,10 @@ export default function RootLayout({
       >
         <Header />
         <div className={styles.content}>
-          {children}
-          <Footer />
+          <div className={styles.sliding}>
+            {children}
+            <Footer />
+          </div>
         </div>
       </body>
     </html>

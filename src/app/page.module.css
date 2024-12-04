@@ -148,6 +148,7 @@
   position: relative;
   margin-top: 16px;
   z-index: -1;
+  margin-bottom: 38px;
 }
 
 .couponContent {
@@ -186,6 +187,28 @@
   background-color: #dbdbdb;
   box-shadow: 0 0 0 1px #fff, 0 0 0 2px #dee1e3;
   bottom: -20px;
+}
+
+.couponTimeEnd {
+  display: flex;
+
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: -30px;
+}
+
+.couponTimeEnd::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #dbdbdb;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #dee1e3;
+  bottom: 25px;
 }
 
 .couponContent::before {
@@ -317,4 +340,94 @@
   border-radius: 50%;
   background-color: #dbdbdb;
   box-shadow: 0 0 0 1px #fff, 0 0 0 2px #dee1e3;
+}
+
+.header {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 8px;
+}
+
+.content {
+  padding: 8px;
+}
+
+.couponCode {
+  height: 106px;
+  width: 100%;
+  border-radius: 8px;
+  background: #fff4e4;
+  padding: 16px;
+  font-weight: 400;
+  color: #191919;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.couponCode:last-child {
+  margin-bottom: 0;
+}
+
+.couponDiscounts {
+  line-height: 22px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fd384f;
+}
+.couponCondition {
+  line-height: 16px;
+  font-size: 12px;
+}
+.couponDescription {
+  line-height: 16px;
+  font-size: 12px;
+  color: #757575;
+  margin: 8px 0 4px;
+}
+.couponCodeTime {
+  line-height: 16px;
+  font-size: 12px;
+  color: #757575;
+}
+
+.couponBackimg {
+  height: 80px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.couponCodes {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  padding: 2px 4px;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  background: rgba(221, 221, 221, 0.3);
+  border-radius: 4px;
+  color: #252525;
+}
+
+.couponCode:last-child {
+  margin-bottom: 0;
+}
+
+.couponBanner {
+  background: #ffebed;
+
+  height: 106px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px;
+  font-weight: 400;
+  color: #191919;
+  position: relative;
 }

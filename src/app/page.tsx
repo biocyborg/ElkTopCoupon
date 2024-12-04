@@ -126,7 +126,6 @@ export default function Home() {
           <img src="/assets/logo.png" alt="" className={styles.logo} />
         </div>
       </div>
-
       <div className={styles.terrace}>
         <div className={styles.terraceTitle}>
           Featured Stores with Discount Codes
@@ -137,7 +136,29 @@ export default function Home() {
             <div className={styles.couponItems}>
               <div className={styles.couponItem}>
                 <div className={styles.time}>2024-12-04T04:01</div>
+                <div className={styles.header}>Coupon</div>
+                <div className={styles.content}>
+                  <div className={styles.couponCode}>
+                    <div className={styles.couponDiscounts}>1111</div>
+                    <div className={styles.couponCondition}>2222</div>
+                    <div className={styles.couponDescription}>3333</div>
+                    <div className={styles.couponCodeTime}>4444</div>
+                    <div className={styles.couponCodes} title="6666">
+                      6666
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div className={styles.couponItem}>
+                <div className={styles.time}>2024-12-02T04:01</div>
+                <div className={styles.header}>Banner</div>
+                <div className={styles.content}>
+                  <div className={styles.couponBanner}>2354656</div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.couponTimeEnd}>
+              You've reached the bottom of the list.
             </div>
           </div>
         </div>
