@@ -158,7 +158,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.couponTimeEnd}>
-              You've reached the bottom of the list.
+              You&apos;ve reached the bottom of the list.
             </div>
           </div>
         </div>
