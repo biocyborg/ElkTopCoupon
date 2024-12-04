@@ -22,15 +22,12 @@
   margin-top: 16px;
   background: #dbdbdb;
   border-radius: 8px;
+  overflow: hidden;
 }
 
-.aliexpress {
-  width: 210px;
+.image {
   position: absolute;
-  left: 12px;
-  top: 32px;
-  transform: rotate(-5deg);
-  border-radius: 16px;
+  transition: all 0.3s ease; /* 添加平滑过渡动画 */
 }
 
 .plugin {
