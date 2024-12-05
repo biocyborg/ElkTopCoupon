@@ -2,8 +2,6 @@ import { Tooltip } from "antd";
 import styles from "./index.module.css";
 import { useTranslation } from "react-i18next";
 import toast from "react-hot-toast";
-import classnames from "classnames";
-import { useState } from "react";
 
 interface IDiscountsProps {
   terraceImg: string;

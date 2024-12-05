@@ -1,6 +1,4 @@
-import { Tooltip } from "antd";
 import styles from "./index.module.css";
-import { useTranslation } from "react-i18next";
 import { Item } from "./components/Item";
 
 interface IDiscountsProps {
