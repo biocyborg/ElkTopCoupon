@@ -1,9 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
+import { useTranslation } from "react-i18next";
+import { Discounts } from "@/components/Discounts";
+
 import styles from "./page.module.css";
 
 export default function Home() {
+  const { t } = useTranslation();
+
   const [images, setImages] = useState<
     {
       url: string;
@@ -74,12 +80,36 @@ export default function Home() {
     setImages(generatedImages);
   }, []);
 
+  const list = [
+    {
+      type: "COUPON",
+      title: "Coupon",
+      time: "2024-12-04 04:01",
+      codeList: [
+        {
+          discounts: "MX$250 OFF",
+          couponCode: "BFSALE3",
+          condition: "Orders over MX$1900",
+          description: "",
+          time: "2024-11-21 22:00:00 ~ 2024-12-03 21:59:59 PST",
+        },
+      ],
+    },
+    {
+      type: "BANNER",
+      title: "Banner",
+      time: "2024-12-02 04:01",
+      bannerItem: {
+        url: "/assets/terrace/6115-23f0d4d9fb4ec8d1.png",
+        alt: "aliExpress",
+      },
+    },
+  ];
+
   return (
     <div className={styles.container}>
       <div className={styles.terrace}>
-        <div className={styles.terraceTitle}>
-          Featured Stores with Discount Codes
-        </div>
+        <div className={styles.terraceTitle}>{t("units_1")}</div>
         <div className={styles.terraceItems}>
           {images.map((image, index) => (
             <img
@@ -99,20 +129,17 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.terrace}>
-        <div className={styles.terraceTitle}>Quickly apply coupon</div>
+        <div className={styles.terraceTitle}>{t("units_2")}</div>
         <div className={styles.plugin}>
           <div className={styles.img}>
             <img src="/assets/exhibition.avif" alt="" />
             <img src="/assets/employ.avif" alt="" />
           </div>
           <div className={styles.introduce}>
-            <span>EUtopia: AliExpress Discount Code Locator</span>
-            <span>
-              Unlock savings instantly and use official AliExpress coins for
-              even more discounts!
-            </span>
-            <span>Automatically applies discount codes for you.</span>
-            <span>Make your shopping more affordable!</span>
+            <span>{t("chrome_plugin_title")}</span>
+            <span>{t("chrome_plugin_describe_1")}</span>
+            <span>{t("chrome_plugin_describe_2")}</span>
+            <span>{t("chrome_plugin_describe_3")}</span>
           </div>
           <div className={styles.btn}>
             <a
@@ -120,46 +147,30 @@ export default function Home() {
               target="_blank"
               className={styles.click}
             >
-              Download plugin
+              {t("chrome_plugin_download")}
             </a>
           </div>
           <img src="/assets/logo.png" alt="" className={styles.logo} />
         </div>
       </div>
       <div className={styles.terrace}>
-        <div className={styles.terraceTitle}>
-          Featured Stores with Discount Codes
-        </div>
+        <div className={styles.terraceTitle}>{t("units_3")}</div>
         <div className={styles.coupon}>
           <div className={styles.couponContent}>
-            <div className={styles.couponTime}>TODAY</div>
+            <div className={styles.couponTime}>{t("today")}</div>
             <div className={styles.couponItems}>
-              <div className={styles.couponItem}>
-                <div className={styles.time}>2024-12-04T04:01</div>
-                <div className={styles.header}>Coupon</div>
-                <div className={styles.content}>
-                  <div className={styles.couponCode}>
-                    <div className={styles.couponDiscounts}>1111</div>
-                    <div className={styles.couponCondition}>2222</div>
-                    <div className={styles.couponDescription}>3333</div>
-                    <div className={styles.couponCodeTime}>4444</div>
-                    <div className={styles.couponCodes} title="6666">
-                      6666
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.couponItem}>
-                <div className={styles.time}>2024-12-02T04:01</div>
-                <div className={styles.header}>Banner</div>
-                <div className={styles.content}>
-                  <div className={styles.couponBanner}>2354656</div>
-                </div>
-              </div>
+              {list.map((item, index) => (
+                <Discounts
+                  key={index}
+                  title={item.title}
+                  type={item.type}
+                  time={item.time}
+                  codeList={item.codeList}
+                  bannerItem={item.bannerItem}
+                />
+              ))}
             </div>
-            <div className={styles.couponTimeEnd}>
-              You&apos;ve reached the bottom of the list.
-            </div>
+            <div className={styles.couponTimeEnd}>{t("baseline")}</div>
           </div>
         </div>
       </div>

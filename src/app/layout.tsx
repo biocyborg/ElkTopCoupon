@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import { ConfigProvider } from "antd";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+
+import { Toaster } from "react-hot-toast";
 
 import styles from "./layout.module.css";
 
 import "@/styles/index.css";
+import { config } from "./thirdpartyColorConfig";
 
 const geistChakraPetch = localFont({
   src: "./fonts/ChakraPetch.ttf",
@@ -39,17 +42,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta name="verify-admitad" content="5af0702a27" />
-      <body
-        className={`${geistChakraPetch.variable} ${geistProtestRevolution.variable} ${geistAnton.variable} ${styles.container}`}
-      >
-        <Header />
-        <div className={styles.content}>
-          <div className={styles.sliding}>
-            {children}
-            <Footer />
+      <ConfigProvider theme={config} wave={{ disabled: true }}>
+        <body
+          className={`${geistChakraPetch.variable} ${geistProtestRevolution.variable} ${geistAnton.variable} ${styles.container}`}
+        >
+          <Header />
+          <div className={styles.content}>
+            <div className={styles.sliding}>
+              {children}
+              <Footer />
+            </div>
+            <Toaster position="top-center" reverseOrder={false} />
           </div>
-        </div>
-      </body>
+        </body>
+      </ConfigProvider>
     </html>
   );
 }
