@@ -11,5 +11,6 @@
   "banner": "Banner",
   "today": "VANDAAG",
   "baseline": "Je bent aan het einde van de lijst gekomen.",
-  "copyJump": "Klik om te kopiëren en de site te openen"
+  "copy_jump": "Klik om te kopiëren en de site te openen",
+  "download_hint": "Download de plugin om meer kortingen te genieten."
 }

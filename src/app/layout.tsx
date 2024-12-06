@@ -59,3 +59,15 @@ export default function RootLayout({
     </html>
   );
 }
+
+// ar
+// cn
+// de
+// es
+// fr
+// it
+// jp
+// kr
+// nl
+// pt
+// us

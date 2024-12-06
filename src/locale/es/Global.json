@@ -11,5 +11,6 @@
   "banner": "Banner",
   "today": "HOY",
   "baseline": "Has llegado al final de la lista.",
-  "copyJump": "Haz clic para copiar y abrir el sitio"
+  "copy_jump": "Haz clic para copiar y abrir el sitio",
+  "download_hint": "Descargue el complemento para disfrutar de más descuentos."
 }

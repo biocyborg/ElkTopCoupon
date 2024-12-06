@@ -108,7 +108,6 @@
   -webkit-user-select: none; /* 适用于 Safari */
   -moz-user-select: none; /* 适用于 Firefox */
   -ms-user-select: none; /* 适用于 Internet Explorer 和 Edge */
-
   text-decoration: auto;
 }
 

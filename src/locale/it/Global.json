@@ -11,5 +11,6 @@
   "banner": "Banner",
   "today": "OGGI",
   "baseline": "Hai raggiunto la fine dell'elenco.",
-  "copyJump": "Clicca per copiare e aprire il sito"
+  "copy_jump": "Clicca per copiare e aprire il sito",
+  "download_hint": "Scarica il plugin per godere di ulteriori sconti."
 }

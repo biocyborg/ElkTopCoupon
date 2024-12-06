@@ -24,7 +24,7 @@ function Item({
 }: IDiscountsProps) {
   const { t } = useTranslation();
 
-  async function CopyJump() {
+  async function copy_jump() {
     try {
       if (navigator.clipboard) {
         await navigator.clipboard.writeText(couponCode);
@@ -53,11 +53,11 @@ function Item({
         ) : null}
         {time ? <div className={styles.couponCodeTime}>{time}</div> : null}
 
-        <Tooltip title={t("copyJump")} color="#95bf47" key="#95bf47">
+        <Tooltip title={t("copy_jump")} color="#95bf47" key="#95bf47">
           <a
             href={terraceUrl}
             className={styles.couponCodes}
-            onClick={CopyJump}
+            onClick={copy_jump}
             target="_blank"
           >
             {couponCode}

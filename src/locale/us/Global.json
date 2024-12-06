@@ -11,5 +11,6 @@
   "banner": "Banner",
   "today": "TODAY",
   "baseline": "You've reached the bottom of the list.",
-  "copyJump": "Click to copy & open site"
+  "copy_jump": "Click to copy & open site",
+  "download_hint": "Download the plugin to enjoy more discounts."
 }

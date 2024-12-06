@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 import { useTranslation } from "react-i18next";
-import { Discounts, IDiscountsType } from "@/components/Discounts";
 
-import list from "./staticDatum.json";
+import { promoData } from "./staticDatum";
 
 import styles from "./page.module.css";
+import { Discounts } from "@/components/Discounts";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -135,14 +135,8 @@ export default function Home() {
           <div className={styles.couponContent}>
             <div className={styles.couponTime}>{t("today")}</div>
             <div className={styles.couponItems}>
-              {list.map((item, index) => (
-                <Discounts
-                  key={index}
-                  type={item.type as IDiscountsType}
-                  time={item.time}
-                  codeList={item.codeList}
-                  bannerItem={item.bannerItem}
-                />
+              {promoData.map((item, index) => (
+                <Discounts key={index} item={item} />
               ))}
             </div>
             <div className={styles.couponTimeEnd}>{t("baseline")}</div>

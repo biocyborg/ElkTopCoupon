@@ -11,5 +11,6 @@
   "banner": "横幅",
   "today": "今天",
   "baseline": "您已到达列表底部。",
-  "copyJump": "点击复制并打开网站"
+  "copy_jump": "点击复制并打开网站",
+  "download_hint": "下载插件以享受更多折扣。"
 }
