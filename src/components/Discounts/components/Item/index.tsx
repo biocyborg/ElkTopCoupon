@@ -36,20 +36,6 @@ function Item({
     }
   }
 
-  function getRandomCharacters(str: string, count: number) {
-    if (str.length <= count) {
-      return str;
-    }
-    const chars = str.split("");
-    const selected = [];
-    while (selected.length < count) {
-      const randomIndex = Math.floor(Math.random() * chars.length);
-      selected.push(chars[randomIndex]);
-      chars.splice(randomIndex, 1);
-    }
-    return selected.join("");
-  }
-
   return (
     <div className={styles.couponCode}>
       <div className={styles.background}>
