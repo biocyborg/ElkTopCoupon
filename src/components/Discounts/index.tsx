@@ -17,8 +17,8 @@ interface IDiscountsProps {
     terraceUrl?: string;
   }[];
   bannerItem?: {
-    url: string;
-    alt: string;
+    url?: string;
+    alt?: string;
   };
 }
 
@@ -35,7 +35,7 @@ function Discounts({ type, time, codeList, bannerItem }: IDiscountsProps) {
       <div className={styles.content}>
         {type === "BANNER" ? (
           <div className={styles.couponBanner}>
-            <img src={bannerItem.url} alt={bannerItem.alt} />
+            <img src={bannerItem?.url} alt={bannerItem?.alt} />
           </div>
         ) : null}
         {type === "COUPON" ? (
