@@ -3,7 +3,9 @@
 import { useEffect, useState } from "react";
 
 import { useTranslation } from "react-i18next";
-import { Discounts } from "@/components/Discounts";
+import { Discounts, IDiscountsType } from "@/components/Discounts";
+
+import list from "./staticDatum.json";
 
 import styles from "./page.module.css";
 
@@ -80,32 +82,6 @@ export default function Home() {
     setImages(generatedImages);
   }, []);
 
-  const list = [
-    {
-      type: "COUPON",
-      title: "Coupon",
-      time: "2024-12-04 04:01",
-      codeList: [
-        {
-          discounts: "MX$250 OFF",
-          couponCode: "BFSALE3",
-          condition: "Orders over MX$1900",
-          description: "",
-          time: "2024-11-21 22:00:00 ~ 2024-12-03 21:59:59 PST",
-        },
-      ],
-    },
-    {
-      type: "BANNER",
-      title: "Banner",
-      time: "2024-12-02 04:01",
-      bannerItem: {
-        url: "/assets/terrace/6115-23f0d4d9fb4ec8d1.png",
-        alt: "aliExpress",
-      },
-    },
-  ];
-
   return (
     <div className={styles.container}>
       <div className={styles.terrace}>
@@ -162,8 +138,7 @@ export default function Home() {
               {list.map((item, index) => (
                 <Discounts
                   key={index}
-                  title={item.title}
-                  type={item.type}
+                  type={item.type as IDiscountsType}
                   time={item.time}
                   codeList={item.codeList}
                   bannerItem={item.bannerItem}

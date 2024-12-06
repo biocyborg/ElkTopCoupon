@@ -7,10 +7,10 @@ interface IDiscountsProps {
   terraceImg: string;
   discounts: string;
   condition: string;
-  description: string;
-  time: string;
+  description?: string;
+  time?: string;
   couponCode: string;
-  terraceUrl: string;
+  terraceUrl?: string;
 }
 
 function Item({
@@ -56,10 +56,17 @@ function Item({
         <img src={terraceImg} alt="" />
       </div>
       <div className={styles.foreground}>
-        <div className={styles.couponDiscounts}>{discounts}</div>
-        <div className={styles.couponCondition}>{condition}</div>
-        <div className={styles.couponDescription}>{description}</div>
-        <div className={styles.couponCodeTime}>{time}</div>
+        {discounts ? (
+          <div className={styles.couponDiscounts}>{discounts}</div>
+        ) : null}
+        {condition ? (
+          <div className={styles.couponCondition}>{condition}</div>
+        ) : null}
+        {description ? (
+          <div className={styles.couponDescription}>{description}</div>
+        ) : null}
+        {time ? <div className={styles.couponCodeTime}>{time}</div> : null}
+
         <Tooltip title={t("copyJump")} color="#95bf47" key="#95bf47">
           <a
             href={terraceUrl}
@@ -67,10 +74,7 @@ function Item({
             onClick={CopyJump}
             target="_blank"
           >
-            <div className={styles.conceal}>
-              {getRandomCharacters(couponCode, 3)}
-            </div>
-            <div className={styles.couponCodesHide}></div>
+            {couponCode}
           </a>
         </Tooltip>
       </div>

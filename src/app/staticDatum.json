@@ -1,0 +1,57 @@
+[
+  {
+    "type": "COUPON",
+    "time": "Dec 9, 2024, 23:59 PST",
+    "bannerItem": {},
+    "codeList": [
+      {
+        "discounts": "US$3 OFF",
+        "couponCode": "AEAFF03",
+        "condition": "Orders over $29",
+        "time": "2024-12-09 00:00:00 ~ 2024-12-15 23:59:59 PST",
+        "terraceImg": "/assets/terrace/6115-23f0d4d9fb4ec8d1.png",
+        "terraceUrl": "https://s.click.aliexpress.com/e/_DDaMOZH"
+      },
+      {
+        "discounts": "US$8 OFF",
+        "couponCode": "AEAFF08",
+        "condition": "Orders over $69",
+        "time": "2024-12-09 00:00:00 ~ 2024-12-15 23:59:59 PST",
+        "terraceImg": "/assets/terrace/6115-23f0d4d9fb4ec8d1.png",
+        "terraceUrl": "https://s.click.aliexpress.com/e/_DDaMOZH"
+      },
+      {
+        "discounts": "US$18 OFF",
+        "couponCode": "AEAFF18",
+        "condition": "Orders over $139",
+        "time": "2024-12-09 00:00:00 ~ 2024-12-15 23:59:59 PST",
+        "terraceImg": "/assets/terrace/6115-23f0d4d9fb4ec8d1.png",
+        "terraceUrl": "https://s.click.aliexpress.com/e/_DDaMOZH"
+      },
+      {
+        "discounts": "US$30 OFF",
+        "couponCode": "AEAFF30",
+        "condition": "Orders over $239",
+        "time": "2024-12-09 00:00:00 ~ 2024-12-15 23:59:59 PST",
+        "terraceImg": "/assets/terrace/6115-23f0d4d9fb4ec8d1.png",
+        "terraceUrl": "https://s.click.aliexpress.com/e/_DDaMOZH"
+      },
+      {
+        "discounts": "US$50 OFF",
+        "couponCode": "AEAFF50",
+        "condition": "Orders over $369",
+        "time": "2024-12-09 00:00:00 ~ 2024-12-15 23:59:59 PST",
+        "terraceImg": "/assets/terrace/6115-23f0d4d9fb4ec8d1.png",
+        "terraceUrl": "https://s.click.aliexpress.com/e/_DDaMOZH"
+      },
+      {
+        "discounts": "US$100 OFF",
+        "couponCode": "AEAFF100",
+        "condition": "Orders over $759",
+        "time": "2024-12-09 00:00:00 ~ 2024-12-15 23:59:59 PST",
+        "terraceImg": "/assets/terrace/6115-23f0d4d9fb4ec8d1.png",
+        "terraceUrl": "https://s.click.aliexpress.com/e/_DDaMOZH"
+      }
+    ]
+  }
+]

@@ -33,6 +33,9 @@
 
 .foreground {
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .couponDiscounts {
@@ -105,39 +108,8 @@
   -webkit-user-select: none; /* 适用于 Safari */
   -moz-user-select: none; /* 适用于 Firefox */
   -ms-user-select: none; /* 适用于 Internet Explorer 和 Edge */
-}
 
-.couponCodesHide {
-  width: 60%;
-  height: 31px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #8776e0;
-  border-radius: 4px 0 0 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: azure;
-}
-
-.couponCodesHide::before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 33px solid #0000;
-  border-left: 45px solid #8776e0;
-  position: absolute;
-  right: -44px;
-  top: 0;
-}
-
-.conceal {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  text-decoration: auto;
 }
 
 .couponCode:last-child {

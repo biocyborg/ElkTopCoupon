@@ -1,36 +1,37 @@
 import styles from "./index.module.css";
 import { Item } from "./components/Item";
+import { useTranslation } from "react-i18next";
+
+export type IDiscountsType = "COUPON" | "BANNER";
 
 interface IDiscountsProps {
-  type: "COUPON" | "BANNER";
-  title: string;
+  type: IDiscountsType;
   time: string;
-  codeList: {
+  codeList?: {
     discounts: string;
     couponCode: string;
     condition: string;
-    description: string;
-    time: string;
+    description?: string;
+    time?: string;
     terraceImg: string;
-    terraceUrl: string;
+    terraceUrl?: string;
   }[];
-  bannerItem: {
+  bannerItem?: {
     url: string;
     alt: string;
   };
 }
 
-function Discounts({
-  type,
-  title,
-  time,
-  codeList,
-  bannerItem,
-}: IDiscountsProps) {
+function Discounts({ type, time, codeList, bannerItem }: IDiscountsProps) {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.couponItem}>
       <div className={styles.time}>{time}</div>
-      <div className={styles.header}>{title}</div>
+      <div className={styles.header}>
+        {type === "COUPON" ? <>{t("coupon")}</> : null}
+        {type === "BANNER" ? <>{t("banner")}</> : null}
+      </div>
       <div className={styles.content}>
         {type === "BANNER" ? (
           <div className={styles.couponBanner}>
@@ -39,7 +40,7 @@ function Discounts({
         ) : null}
         {type === "COUPON" ? (
           <>
-            {codeList.map((item, index) => (
+            {codeList?.map((item, index) => (
               <Item
                 key={index}
                 terraceImg={item.terraceImg}
